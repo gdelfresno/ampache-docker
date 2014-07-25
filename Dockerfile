@@ -4,6 +4,7 @@ MAINTAINER James Jones <velocity303@gmail.com>
 RUN echo 'deb http://download.videolan.org/pub/debian/stable/ /' >> /etc/apt/sources.list
 RUN echo 'deb-src http://download.videolan.org/pub/debian/stable/ /' >> /etc/apt/sources.list
 RUN echo 'deb http://archive.ubuntu.com/ubuntu trusty main multiverse' >> /etc/apt/sources.list
+RUN apt-get update
 RUN apt-get install --no-install-recommends -q -y wget
 RUN wget -O - http://download.videolan.org/pub/debian/videolan-apt.asc|sudo apt-key add -
 RUN apt-get update
