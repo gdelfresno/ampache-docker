@@ -12,9 +12,9 @@ RUN apt-get install --no-install-recommends -q -y apache2 php5 php5-json curl ph
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/www/*
 RUN cd /var/tmp \
- && curl -sSL --insecure https://github.com/ampache/ampache/archive/3.7.0.tar.gz | tar xz \
- && mv /var/tmp/ampache-3.7.0/* /var/www/ \
- && rm -rf /var/tmp/ampache-3.7.0 \
+ && curl -sSL --insecure https://github.com/ampache/ampache/archive/3.8.0.tar.gz | tar xz \
+ && mv /var/tmp/ampache-3.8.0/* /var/www/ \
+ && rm -rf /var/tmp/ampache-3.8.0 \
  && chown -R www-data:www-data /var/www/
 
 ADD 001-ampache.conf /etc/apache2/sites-available/
