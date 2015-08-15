@@ -25,5 +25,8 @@ VOLUME ["/media"]
 VOLUME ["/var/www/config"]
 VOLUME ["/var/www/themes"]
 EXPOSE 80
-CMD ["/usr/sbin/apache2ctl", "-D",  "FOREGROUND"]
+
+ADD run.sh /run.sh
+RUN chmod 755 /run.sh
+CMD ["/run.sh"]
 
